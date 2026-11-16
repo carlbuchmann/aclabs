@@ -866,3 +866,9 @@ Commit after each challenge with `-m 'Challenge <#>'`, to be able to track you c
 
     - [Fabric Numbering](https://avd.arista.com/6.5/ansible_collections/arista/avd/roles/eos_designs/docs/data-models.html#preview-fabric-numberingons/arista/avd/roles/eos_designs/docs/data-models.html#preview-fabric-numbering)
     - Hint: You will need to keep the statically set IDs on the *brdr* leafs, since the pool manager assigns IDs alphabetically.
+
+6. Convert connected endpoint and fabric configuration from MLAG to EVPN A/A ESI.
+
+    - Remove MLAG configration from leafs. [Node type MLAG configuration](https://avd.arista.com/6.5/ansible_collections/arista/avd/roles/eos_designs/docs/data-models.html#node-type-l2-and-mlag-configuration)
+    - Configure connected endpoints with ESI using auto assignment. [Endpoint connectivity](https://avd.arista.com/6.5/ansible_collections/arista/avd/roles/eos_designs/docs/data-models.html#endpoint-connectivity)
+    - Hint: All leafs must have a unique BGP AS.
